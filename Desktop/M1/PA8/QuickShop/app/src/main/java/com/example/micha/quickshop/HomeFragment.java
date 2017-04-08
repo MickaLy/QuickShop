@@ -100,6 +100,8 @@ public class HomeFragment extends Fragment {
         listRowItem.add(prod5);
         listRowItem.add(prod6);
 
+
+
         listView.setAdapter(new ArrayAdapter<Product>(getActivity().getApplicationContext(), android.R.layout.simple_list_item_1,
                 listRowItem));
 
@@ -108,17 +110,20 @@ public class HomeFragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Product product = (Product) listView.getItemAtPosition(position);
                 System.out.println(product.getDescripton());
-                //eventListener.onMyEvent(product);
+                eventListener.onMyEvent(product);
             }
         });
-
         return view;
     }
 
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        eventListener = (OnMyFragmentEvent) context;
+        try {
+            eventListener = (OnMyFragmentEvent) context;
+        }catch (Exception e){
+
+        }
     }
 
     // TODO: Rename method, update argument and hook method into UI event

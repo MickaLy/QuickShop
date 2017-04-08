@@ -25,7 +25,7 @@ import java.util.List;
  * Use the {@link ShoppingCartFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ShoppingCartFragment extends Fragment {
+public class ShoppingCartFragment extends Fragment{
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -79,23 +79,13 @@ public class ShoppingCartFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         listView = (ListView) getView().findViewById(R.id.list_view_shoppingCart);
         productList = new ArrayList<Product>();
+        productList = null;
 
         listView.setAdapter(new ArrayAdapter<Product>(getActivity().getApplicationContext(), android.R.layout.simple_list_item_1, productList));
-
+        listView.setVisibility(View.GONE);
 
 
         return view;
-    }
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        try{
-            eventListener = (OnMyFragmentEvent) context;
-        }catch(ClassCastException e){
-            throw new ClassCastException(context.toString());
-
-        }
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -109,13 +99,21 @@ public class ShoppingCartFragment extends Fragment {
         super.onDetach();
         mListener = null;
     }
+
+    public void addNewProduct(Product product){
+        Product produit = new Product(0, "", "", "");
+        //Product produit =  new Product(product.getImageId(), product.getTitle(), product.getPrice(), product.getDescripton());
+        produit.setImageId(product.getImageId());
+        produit.setTitle(product.getTitle());
+        produit.setPrice(product.getPrice());
+        produit.setDescripton(product.getDescripton());
+        productList.add(produit);
+        listView.setVisibility(View.VISIBLE);
+    }
+
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
-    }
-
-    public void addNewProduct(Product product){
-        productList.add(product);
     }
 
 }
