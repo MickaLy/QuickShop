@@ -1,0 +1,141 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.micha.quickshop.AccountFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:text="First Name: "
+        android:layout_marginTop="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/firstnameTextView" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_marginLeft="55dp"
+        android:layout_marginStart="55dp"
+        android:id="@+id/firstnameEditText"
+        android:layout_alignBaseline="@+id/firstnameTextView"
+        android:layout_alignBottom="@+id/firstnameTextView"
+        android:layout_toRightOf="@+id/firstnameTextView"
+        android:layout_toEndOf="@+id/firstnameTextView" />
+
+    <TextView
+        android:text="Last Name: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/firstnameEditText"
+        android:layout_alignLeft="@+id/firstnameTextView"
+        android:layout_alignStart="@+id/firstnameTextView"
+        android:layout_marginTop="22dp"
+        android:id="@+id/lastnameTextView" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/firstnameEditText"
+        android:layout_toRightOf="@+id/lastnameTextView"
+        android:layout_marginLeft="55dp"
+        android:id="@+id/lastnameEditText" />
+
+    <TextView
+        android:text="Credit Card ID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:id="@+id/creditcardTextView"
+        android:layout_below="@+id/lastnameEditText"
+        android:layout_alignLeft="@+id/lastnameTextView"
+        android:layout_alignStart="@+id/lastnameTextView" />
+
+    <TextView
+        android:text="CVV Code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cvvTextView"
+        android:layout_marginTop="22dp"
+        android:layout_below="@+id/creditcardEditText"
+        android:layout_alignBaseline="@+id/cvvEditText"
+        android:layout_alignBottom="@+id/cvvEditText"
+        android:layout_alignLeft="@+id/creditcardTextView"
+        android:layout_alignStart="@+id/creditcardTextView" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/cvvEditText"
+        android:layout_below="@+id/creditcardEditText"
+        android:layout_alignLeft="@+id/lastnameEditText"
+        android:layout_alignStart="@+id/lastnameEditText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="MM/YYYY"
+        android:ems="10"
+        android:layout_below="@+id/cvvEditText"
+        android:layout_alignLeft="@+id/creditcardEditText"
+        android:layout_alignStart="@+id/creditcardEditText"
+        android:id="@+id/expirationdateEditText" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/expirationdateEditText"
+        android:layout_alignLeft="@+id/expirationDateTextView"
+        android:layout_alignStart="@+id/expirationDateTextView"
+        android:id="@+id/validateBtn"
+        android:text="Validate" />
+
+    <Button
+        android:text="CHANGE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/changeBtn"
+        android:layout_below="@+id/expirationdateEditText"
+        android:layout_toRightOf="@+id/expirationDateTextView"
+        android:layout_toEndOf="@+id/expirationDateTextView" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/creditcardEditText"
+        android:layout_below="@+id/lastnameEditText"
+        android:layout_alignLeft="@+id/lastnameEditText"
+        android:layout_alignStart="@+id/lastnameEditText" />
+
+    <TextView
+        android:text="Expiration Date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/expirationDateTextView"
+        android:layout_alignBaseline="@+id/expirationdateEditText"
+        android:layout_alignBottom="@+id/expirationdateEditText"
+        android:layout_alignLeft="@+id/cvvTextView"
+        android:layout_alignStart="@+id/cvvTextView" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/validateBtn"
+        android:layout_alignLeft="@+id/validateBtn"
+        android:layout_alignStart="@+id/validateBtn"
+        android:id="@+id/list_userRegistered" />
+
+
+</RelativeLayout>
