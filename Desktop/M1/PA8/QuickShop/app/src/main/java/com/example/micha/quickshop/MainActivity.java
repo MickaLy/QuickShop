@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements OnMyFragmentEvent
     private NavigationView mNavDrawer;
     private FragmentManager fragmentManager;
 
+
     private ActionBarDrawerToggle drawerToggle;
 
     @Override
