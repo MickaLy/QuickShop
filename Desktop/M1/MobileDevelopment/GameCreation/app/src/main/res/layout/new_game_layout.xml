@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:text="Day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="22dp"
+        android:id="@+id/textView_day" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/textView_day"
+        android:layout_toEndOf="@+id/textView_day"
+        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="11dp"
+        android:id="@+id/editText_day" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/editText_day"
+        android:layout_alignLeft="@+id/editText_day"
+        android:layout_alignStart="@+id/editText_day"
+        android:id="@+id/editText_month" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_below="@+id/editText_month"
+        android:layout_alignLeft="@+id/editText_month"
+        android:layout_alignStart="@+id/editText_month"
+        android:id="@+id/editText_year" />
+
+    <TextView
+        android:text="Month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_month"
+        android:layout_alignBaseline="@+id/editText_month"
+        android:layout_alignBottom="@+id/editText_month"
+        android:layout_alignLeft="@+id/textView_day"
+        android:layout_alignStart="@+id/textView_day" />
+
+    <TextView
+        android:text="Year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText_month"
+        android:layout_alignLeft="@+id/textView_month"
+        android:layout_alignStart="@+id/textView_month"
+        android:layout_marginTop="10dp"
+        android:id="@+id/textView_year" />
+
+    <TextView
+        android:text="Type of game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/textView_surface"
+        android:layout_alignStart="@+id/textView_surface"
+        android:id="@+id/textView_type_of_game" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/textView_type_of_game"
+        android:layout_toEndOf="@+id/textView_type_of_game"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:id="@+id/spinner_type_of_game" />
+
+    <TextView
+        android:text="Surface"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:id="@+id/textView_surface"
+        android:layout_below="@+id/editText_year"
+        android:layout_alignLeft="@+id/textView_year"
+        android:layout_alignStart="@+id/textView_year" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner_surface"
+        android:layout_alignTop="@+id/textView_surface"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/spinner_type_of_game"
+        android:layout_alignStart="@+id/spinner_type_of_game" />
+
+    <Button
+        android:text="Ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_ok"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/spinner_type_of_game"
+        android:layout_toRightOf="@+id/textView_surface"
+        android:layout_toEndOf="@+id/textView_surface"
+        android:layout_marginLeft="27dp"
+        android:layout_marginStart="27dp" />
+
+    <Button
+        android:text="Register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btn_ok"
+        android:layout_alignRight="@+id/editText_year"
+        android:layout_alignEnd="@+id/editText_year"
+        android:id="@+id/btn_sendData" />
+
+</RelativeLayout>
