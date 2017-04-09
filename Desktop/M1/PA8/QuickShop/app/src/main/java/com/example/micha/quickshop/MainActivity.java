@@ -121,7 +121,7 @@ public class MainActivity extends AppCompatActivity implements OnMyFragmentEvent
 
     @Override
     public void onMyEvent(Product product) {
-        ShoppingCartFragment f2 = (ShoppingCartFragment) fragmentManager.findFragmentById(R.id.fragment_shoppingCart);
-        f2.addNewProduct(product);
+        ShoppingCartFragment frg = (ShoppingCartFragment) fragmentManager.findFragmentById(R.id.fragment_shoppingCart);
+        frg.addNewProduct(product);
     }
 }

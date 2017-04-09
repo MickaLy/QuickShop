@@ -78,11 +78,11 @@ public class ShoppingCartFragment extends Fragment{
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         listView = (ListView) getView().findViewById(R.id.list_view_shoppingCart);
-        productList = new ArrayList<Product>();
+        productList = new ArrayList<>();
         productList = null;
 
         listView.setAdapter(new ArrayAdapter<Product>(getActivity().getApplicationContext(), android.R.layout.simple_list_item_1, productList));
-        listView.setVisibility(View.GONE);
+        //listView.setVisibility(View.GONE);
 
 
         return view;
@@ -100,20 +100,17 @@ public class ShoppingCartFragment extends Fragment{
         mListener = null;
     }
 
-    public void addNewProduct(Product product){
-        Product produit = new Product(0, "", "", "");
-        //Product produit =  new Product(product.getImageId(), product.getTitle(), product.getPrice(), product.getDescripton());
-        produit.setImageId(product.getImageId());
-        produit.setTitle(product.getTitle());
-        produit.setPrice(product.getPrice());
-        produit.setDescripton(product.getDescripton());
-        productList.add(produit);
-        listView.setVisibility(View.VISIBLE);
-    }
-
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
 
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+    }
+
+    public void addNewProduct(Product product){
+        productList.add(product);
+    }
 }

@@ -109,7 +109,6 @@ public class HomeFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Product product = (Product) listView.getItemAtPosition(position);
-                System.out.println(product.getDescripton());
                 eventListener.onMyEvent(product);
             }
         });
@@ -119,11 +118,10 @@ public class HomeFragment extends Fragment {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        try {
+        try{
             eventListener = (OnMyFragmentEvent) context;
-        }catch (Exception e){
+        }catch (Exception e){System.out.println(e.toString());}
 
-        }
     }
 
     // TODO: Rename method, update argument and hook method into UI event
