@@ -124,5 +124,6 @@ public class MainActivity extends AppCompatActivity implements OnMyFragmentEvent
     public void onMyEvent(Product product) {
         ShoppingCartFragment frg = (ShoppingCartFragment) fragmentManager.findFragmentById(R.id.fragment_shoppingCart);
         frg.addNewProduct(product);
+        //test
     }
 }
